@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54230D101C5501140002BC0C /* GraphNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54230D0D1C5501140002BC0C /* GraphNode.swift */; };
+		54230D111C5501140002BC0C /* GraphNodeFromGeneratingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54230D0E1C5501140002BC0C /* GraphNodeFromGeneratingFunction.swift */; };
+		54230D121C5501140002BC0C /* GraphNodeFromGraphEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54230D0F1C5501140002BC0C /* GraphNodeFromGraphEdges.swift */; };
+		54230D181C5501210002BC0C /* BreadthFirstSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54230D141C5501210002BC0C /* BreadthFirstSearch.swift */; };
+		54230D191C5501210002BC0C /* DepthFirstSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54230D151C5501210002BC0C /* DepthFirstSearch.swift */; };
+		54230D1A1C5501210002BC0C /* GenericVisitStartegyWithFringe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54230D161C5501210002BC0C /* GenericVisitStartegyWithFringe.swift */; };
+		54230D1B1C5501210002BC0C /* GraphVisitStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54230D171C5501210002BC0C /* GraphVisitStrategy.swift */; };
+		54230D201C5501350002BC0C /* BreadthFirstSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54230D1C1C5501310002BC0C /* BreadthFirstSearchTests.swift */; };
+		54230D211C5501350002BC0C /* DepthFirstSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54230D1D1C5501310002BC0C /* DepthFirstSearchTests.swift */; };
+		546CC0A61C550083007484BC /* Battipista.h in Headers */ = {isa = PBXBuildFile; fileRef = 546CC0A51C550083007484BC /* Battipista.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		546CC0AD1C550083007484BC /* Battipista.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546CC0A21C550083007484BC /* Battipista.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		546CC0AE1C550083007484BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 546CC0991C550083007484BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 546CC0A11C550083007484BC;
+			remoteInfo = Battipista;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		54230D0D1C5501140002BC0C /* GraphNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphNode.swift; sourceTree = "<group>"; };
+		54230D0E1C5501140002BC0C /* GraphNodeFromGeneratingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphNodeFromGeneratingFunction.swift; sourceTree = "<group>"; };
+		54230D0F1C5501140002BC0C /* GraphNodeFromGraphEdges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphNodeFromGraphEdges.swift; sourceTree = "<group>"; };
+		54230D141C5501210002BC0C /* BreadthFirstSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadthFirstSearch.swift; sourceTree = "<group>"; };
+		54230D151C5501210002BC0C /* DepthFirstSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthFirstSearch.swift; sourceTree = "<group>"; };
+		54230D161C5501210002BC0C /* GenericVisitStartegyWithFringe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericVisitStartegyWithFringe.swift; sourceTree = "<group>"; };
+		54230D171C5501210002BC0C /* GraphVisitStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphVisitStrategy.swift; sourceTree = "<group>"; };
+		54230D1C1C5501310002BC0C /* BreadthFirstSearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadthFirstSearchTests.swift; sourceTree = "<group>"; };
+		54230D1D1C5501310002BC0C /* DepthFirstSearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthFirstSearchTests.swift; sourceTree = "<group>"; };
+		54230D221C55021D0002BC0C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		54230D231C55021D0002BC0C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		546CC0A21C550083007484BC /* Battipista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Battipista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		546CC0A51C550083007484BC /* Battipista.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Battipista.h; sourceTree = "<group>"; };
+		546CC0A71C550083007484BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		546CC0AC1C550083007484BC /* BattipistaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattipistaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		546CC0B31C550083007484BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		546CC09E1C550083007484BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546CC0A91C550083007484BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546CC0AD1C550083007484BC /* Battipista.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54230D0C1C5501140002BC0C /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				54230D0D1C5501140002BC0C /* GraphNode.swift */,
+				54230D0E1C5501140002BC0C /* GraphNodeFromGeneratingFunction.swift */,
+				54230D0F1C5501140002BC0C /* GraphNodeFromGraphEdges.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		54230D131C5501210002BC0C /* VisitStrategies */ = {
+			isa = PBXGroup;
+			children = (
+				54230D141C5501210002BC0C /* BreadthFirstSearch.swift */,
+				54230D151C5501210002BC0C /* DepthFirstSearch.swift */,
+				54230D161C5501210002BC0C /* GenericVisitStartegyWithFringe.swift */,
+				54230D171C5501210002BC0C /* GraphVisitStrategy.swift */,
+			);
+			path = VisitStrategies;
+			sourceTree = "<group>";
+		};
+		546CC0981C550083007484BC = {
+			isa = PBXGroup;
+			children = (
+				54230D221C55021D0002BC0C /* LICENSE */,
+				54230D231C55021D0002BC0C /* README.md */,
+				546CC0A41C550083007484BC /* Source */,
+				546CC0B01C550083007484BC /* Tests */,
+				546CC0A31C550083007484BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		546CC0A31C550083007484BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				546CC0A21C550083007484BC /* Battipista.framework */,
+				546CC0AC1C550083007484BC /* BattipistaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		546CC0A41C550083007484BC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				54230D131C5501210002BC0C /* VisitStrategies */,
+				54230D0C1C5501140002BC0C /* Graph */,
+				546CC0A51C550083007484BC /* Battipista.h */,
+				546CC0A71C550083007484BC /* Info.plist */,
+			);
+			name = Source;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		546CC0B01C550083007484BC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				54230D1C1C5501310002BC0C /* BreadthFirstSearchTests.swift */,
+				54230D1D1C5501310002BC0C /* DepthFirstSearchTests.swift */,
+				546CC0B31C550083007484BC /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		546CC09F1C550083007484BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546CC0A61C550083007484BC /* Battipista.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		546CC0A11C550083007484BC /* Battipista */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546CC0B61C550083007484BC /* Build configuration list for PBXNativeTarget "Battipista" */;
+			buildPhases = (
+				546CC09D1C550083007484BC /* Sources */,
+				546CC09E1C550083007484BC /* Frameworks */,
+				546CC09F1C550083007484BC /* Headers */,
+				546CC0A01C550083007484BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Battipista;
+			productName = Battipista;
+			productReference = 546CC0A21C550083007484BC /* Battipista.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		546CC0AB1C550083007484BC /* BattipistaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 546CC0B91C550083007484BC /* Build configuration list for PBXNativeTarget "BattipistaTests" */;
+			buildPhases = (
+				546CC0A81C550083007484BC /* Sources */,
+				546CC0A91C550083007484BC /* Frameworks */,
+				546CC0AA1C550083007484BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				546CC0AF1C550083007484BC /* PBXTargetDependency */,
+			);
+			name = BattipistaTests;
+			productName = BattipistaTests;
+			productReference = 546CC0AC1C550083007484BC /* BattipistaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		546CC0991C550083007484BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = com.marco83;
+				TargetAttributes = {
+					546CC0A11C550083007484BC = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					546CC0AB1C550083007484BC = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 546CC09C1C550083007484BC /* Build configuration list for PBXProject "Battipista" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 546CC0981C550083007484BC;
+			productRefGroup = 546CC0A31C550083007484BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				546CC0A11C550083007484BC /* Battipista */,
+				546CC0AB1C550083007484BC /* BattipistaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		546CC0A01C550083007484BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546CC0AA1C550083007484BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		546CC09D1C550083007484BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54230D121C5501140002BC0C /* GraphNodeFromGraphEdges.swift in Sources */,
+				54230D1A1C5501210002BC0C /* GenericVisitStartegyWithFringe.swift in Sources */,
+				54230D111C5501140002BC0C /* GraphNodeFromGeneratingFunction.swift in Sources */,
+				54230D191C5501210002BC0C /* DepthFirstSearch.swift in Sources */,
+				54230D1B1C5501210002BC0C /* GraphVisitStrategy.swift in Sources */,
+				54230D101C5501140002BC0C /* GraphNode.swift in Sources */,
+				54230D181C5501210002BC0C /* BreadthFirstSearch.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		546CC0A81C550083007484BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54230D211C5501350002BC0C /* DepthFirstSearchTests.swift in Sources */,
+				54230D201C5501350002BC0C /* BreadthFirstSearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		546CC0AF1C550083007484BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 546CC0A11C550083007484BC /* Battipista */;
+			targetProxy = 546CC0AE1C550083007484BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		546CC0B41C550083007484BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		546CC0B51C550083007484BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		546CC0B71C550083007484BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marco83.Battipista;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		546CC0B81C550083007484BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marco83.Battipista;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		546CC0BA1C550083007484BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marco83.BattipistaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		546CC0BB1C550083007484BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.marco83.BattipistaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		546CC09C1C550083007484BC /* Build configuration list for PBXProject "Battipista" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546CC0B41C550083007484BC /* Debug */,
+				546CC0B51C550083007484BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546CC0B61C550083007484BC /* Build configuration list for PBXNativeTarget "Battipista" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546CC0B71C550083007484BC /* Debug */,
+				546CC0B81C550083007484BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		546CC0B91C550083007484BC /* Build configuration list for PBXNativeTarget "BattipistaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				546CC0BA1C550083007484BC /* Debug */,
+				546CC0BB1C550083007484BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 546CC0991C550083007484BC /* Project object */;
+}
