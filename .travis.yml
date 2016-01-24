@@ -1,0 +1,5 @@
+language: objective-c
+xcode_project: Battipista.xcodeproj
+xcode_scheme: Battipista
+osx_image: xcode7.1
+
