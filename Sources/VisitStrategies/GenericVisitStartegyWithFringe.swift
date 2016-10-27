@@ -24,10 +24,10 @@
 
 import Foundation
 
-public class GenericVisitStartegyWithFringe<Node : GraphNode> : GraphVisitStrategy {
+open class GenericVisitStartegyWithFringe<Node : GraphNode> : GraphVisitStrategy {
     
     /// Function usable to select the next node to visit from the fringe
-    public typealias FringeSelectionFunction = [[Node]] -> Int
+    public typealias FringeSelectionFunction = ([[Node]]) -> Int
     
     /// Nodes that have been already visited
     private var visitedNodes = Set<Node>()
@@ -45,7 +45,7 @@ public class GenericVisitStartegyWithFringe<Node : GraphNode> : GraphVisitStrate
     /// - param fringeSelectionFunction: this function will be called when the fringe is not empty and there is the need
     ///     to select the next path from the fringe. It has to return a valid index in the fringe. The path at that index
     ///     will be used as the next node to visit
-    public init(root: Node, fringeSelectionFunction : FringeSelectionFunction) {
+    public init(root: Node, fringeSelectionFunction : @escaping FringeSelectionFunction) {
         self.fringeSelectionFunction = fringeSelectionFunction
         self.fringe.append([root])
     }
@@ -56,10 +56,10 @@ public class GenericVisitStartegyWithFringe<Node : GraphNode> : GraphVisitStrate
             self.visitedNodes.insert(node)
             node.children
                 .filter { !visitedNodes.contains($0) && !fringeLookup.contains($0) &&  $0 != node}
-                .forEach { self.addToFringe($0, previousPath: path) }
+                .forEach { self.addToFringe(node: $0, previousPath: path) }
             return path
         }
-        return .None
+        return .none
     }
     
     /// Adds an element to the fringe
@@ -71,11 +71,11 @@ public class GenericVisitStartegyWithFringe<Node : GraphNode> : GraphVisitStrate
     /// Removes and returns the first element in the fringe
     private func removeFirstFromFringe() -> [Node]? {
         if(self.fringe.isEmpty) {
-            return .None
+            return .none
         }
         let index = self.fringeSelectionFunction(self.fringe)
         let nodes = self.fringe[index]
-        self.fringe.removeAtIndex(index)
+        self.fringe.remove(at: index)
         self.fringeLookup.remove(nodes.last!)
         return nodes
     }

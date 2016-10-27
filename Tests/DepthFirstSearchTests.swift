@@ -99,7 +99,7 @@ class DepthFirstSearchTests: XCTestCase {
             ["r","B", "C"],
             ["r","A"]
         ]
-        XCTAssertEqual(visitHistory, expected)
+        AssertEqualArrays(visitHistory, expected)
         
     }
     
@@ -116,12 +116,12 @@ class DepthFirstSearchTests: XCTestCase {
         let generator = sut.generate()
         var generatedPaths = [[String]]()
         while generatedPaths.count < 100 { // safety count in case there is a bug and the test would never end
-            guard let next = generator.next() where next.count < levels+1 else { break }
+            guard let next = generator.next(), next.count < levels+1 else { break }
             generatedPaths.append(next.map { $0.content})
         }
         
         // then
-        XCTAssertEqual(generatedPaths, [[""], ["", "R"], ["", "R", "RR"], ["", "R", "RR", "RRR"]])
+        AssertEqualArrays(generatedPaths, [[""], ["", "R"], ["", "R", "RR"], ["", "R", "RR", "RRR"]])
         
     }
 }

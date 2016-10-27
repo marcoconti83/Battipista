@@ -27,9 +27,9 @@ import Foundation
 /**
 A strategy used to visit nodes on the graph
 */
-public protocol GraphVisitStrategy : GeneratorType, SequenceType {
+public protocol GraphVisitStrategy : IteratorProtocol, Sequence {
     
-    typealias Node : GraphNode
+    associatedtype Node : GraphNode
     
     /// Returns the next node explored by the visit strategy, if any,
     /// as a path (array) of nodes that led to this node.
@@ -40,7 +40,7 @@ public protocol GraphVisitStrategy : GeneratorType, SequenceType {
 
 extension GraphVisitStrategy {
     
-    public func generate() -> Self.Generator {
-        return self as! Self.Generator
+    public func generate() -> Self.Iterator {
+        return self as! Self.Iterator
     }
 }

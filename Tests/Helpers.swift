@@ -23,34 +23,14 @@
 //
 
 import Foundation
+import XCTest
 
-/**
- A node in the graph that returns its children by applying a function to the current content. 
- The function is passed to its children, so they can also generate children in the same way
- */
-public struct GraphNodeFromGeneratingFunction<T> : GraphNode where T : Hashable, T: Equatable {
+func AssertEqualArrays<T : Equatable>(_ array1: [[T]], _ array2: [[T]], file: StaticString = #file, line: UInt = #line) {
     
-    public typealias Content = T
-    
-    public typealias ChildrenGenerator = (Content) -> [Content]
-    
-    // function to generate children content
-    let childrenGenerator : ChildrenGenerator
-    
-    public var children : [GraphNodeFromGeneratingFunction<T>] {
-        return self.childrenGenerator(self.content).map { GraphNodeFromGeneratingFunction(nodeContent: $0, childrenGenerator: self.childrenGenerator) }
+    XCTAssertEqual(array1.count, array2.count, "\(array1) is not equal to \(array2)", file: file, line: line)
+    for tuple in zip(array1, array2) {
+        if tuple.0 != tuple.1 {
+            XCTFail("\(array1) is not equal to \(array2)", file: file, line: line)
+        }
     }
-    
-    /*
-    Returns a node in a graph that is fully specified by the graph edges
-    - param childrenGenerator: the function used to generate the content of children nodes
-    - param nodeContent: the content of the present node
-    */
-    public init(nodeContent: T, childrenGenerator : @escaping ChildrenGenerator) {
-        self.content = nodeContent
-        self.childrenGenerator = childrenGenerator
-    }
-    
-    public let content : T
-    
 }

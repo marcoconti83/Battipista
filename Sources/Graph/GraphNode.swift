@@ -29,7 +29,7 @@ A Node in a graph
 */
 public protocol GraphNode : Hashable, Equatable {
   
-    typealias Content : Hashable, Equatable
+    associatedtype Content : Hashable, Equatable
     
     /**
      The wrapped content of the node.
@@ -47,7 +47,7 @@ public extension GraphNode {
     var hashValue: Int { return self.content.hashValue }
 }
 
-public func ==<Node1 : GraphNode, Node2 : GraphNode where Node1.Content == Node2.Content>(lhs: Node1, rhs: Node2) -> Bool
+public func ==<Node1 : GraphNode, Node2 : GraphNode>(lhs: Node1, rhs: Node2) -> Bool where Node1.Content == Node2.Content
 {
     return lhs.content == rhs.content
 }

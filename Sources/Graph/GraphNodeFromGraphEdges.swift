@@ -29,7 +29,7 @@ import Foundation
  edges (link between nodes) in the graph. The map is passed to its children, so they
  can also generate children in the same way
  */
-public struct GraphNodeFromGraphEdges<T where T : Hashable, T: Equatable> : GraphNode {
+public struct GraphNodeFromGraphEdges<T> : GraphNode where T : Hashable, T: Equatable {
     
     // map from node to child nodes. This represents the entire graph.
     let graphEdges : [T : [T]]

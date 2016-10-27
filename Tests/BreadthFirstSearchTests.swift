@@ -98,7 +98,7 @@ class BreadthFirstSearchTests: XCTestCase {
             ["0","1b"],
             ["0","1a","2a"]
         ]
-        XCTAssertEqual(visitHistory, expected)
+        AssertEqualArrays(visitHistory, expected)
         
     }
     
@@ -115,7 +115,7 @@ class BreadthFirstSearchTests: XCTestCase {
         let generator = sut.generate()
         var generatedPaths = [[GraphNodeFromGeneratingFunction<String>]]()
         while generatedPaths.count < 100 { // safety count in case there is a bug and the test would never end
-            guard let next = generator.next() where next.count < levels+1 else { break }
+            guard let next = generator.next(), next.count < levels+1 else { break }
             generatedPaths.append(next)
         }
         
